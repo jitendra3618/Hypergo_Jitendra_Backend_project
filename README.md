@@ -44,57 +44,41 @@ This is a backend RESTful API for a Property Listing system. It allows users to 
    ```bash
    git clone https://github.com/yourusername/property-listing-backend.git
    cd property-listing-backend
-Install dependencies:
+## Install dependencies
 
-bash
-Copy
-Edit
+```bash
 npm install
-Create a .env file in the root directory and add the following:
 
-env
-Copy
-Edit
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret_key
-REDIS_URL=your_redis_connection_url (optional if using Redis Cloud)
-Run the server:
+##API ENDPOINTS
+## API Endpoints
 
-bash
-Copy
-Edit
-npm start
-API Endpoints
-Authentication
-Method	Endpoint	Description	Access
-POST	/api/auth/register	Register a new user	Public
-POST	/api/auth/login	Login with email/password	Public
+| Method | Endpoint                  | Description                          | Access   |
+|--------|---------------------------|------------------------------------|----------|
+| POST   | /api/auth/register        | Register a new user                 | Public   |
+| POST   | /api/auth/login           | Login with email/password           | Public   |
 
-Properties
-Method	Endpoint	Description	Access
-POST	/api/properties	Create a new property	Private
-GET	/api/properties	Get list of properties (with filters)	Public
-GET	/api/properties/:id	Get property details by ID	Public
-PUT	/api/properties/:id	Update property (only owner)	Private
-DELETE	/api/properties/:id	Delete property (only owner)	Private
+| Method | Endpoint                  | Description                          | Access   |
+|--------|---------------------------|------------------------------------|----------|
+| POST   | /api/properties           | Create a new property               | Private  |
+| GET    | /api/properties           | Get list of properties (with filters) | Public   |
+| GET    | /api/properties/:id       | Get property details by ID          | Public   |
+| PUT    | /api/properties/:id       | Update property (only owner)        | Private  |
+| DELETE | /api/properties/:id       | Delete property (only owner)        | Private  |
 
-Favorites
-Method	Endpoint	Description	Access
-POST	/api/favorites	Add property to favorites	Private
-GET	/api/favorites	Get all user's favorites	Private
-DELETE	/api/favorites/:id	Remove favorite by ID	Private
+| Method | Endpoint                  | Description                          | Access   |
+|--------|---------------------------|------------------------------------|----------|
+| POST   | /api/favorites            | Add property to favorites           | Private  |
+| GET    | /api/favorites            | Get all user's favorites             | Private  |
+| DELETE | /api/favorites/:id        | Remove favorite by ID                | Private  |
 
-Recommendations
-Method	Endpoint	Description	Access
-POST	/api/recommendations	Recommend property to another user	Private
-GET	/api/recommendations	Get all recommendations received	Private
+| Method | Endpoint                  | Description                          | Access   |
+|--------|---------------------------|------------------------------------|----------|
+| POST   | /api/recommendations      | Recommend property to another user  | Private  |
+| GET    | /api/recommendations      | Get all recommendations received    | Private  |
 
-Project Structure
-bash
-Copy
-Edit
-property-listing-backend/
+##project directory
+
+```property-listing-backend/
 ├── config/
 │   ├── db.js              # MongoDB connection setup
 │   └── redis.js           # Redis client setup
@@ -119,24 +103,5 @@ property-listing-backend/
 ├── server.js              # Server entry point
 ├── .env                   # Environment variables
 └── package.json
-Notes
-Use Bearer token in Authorization header for all private routes.
-
-Caching is implemented in property listing APIs for better performance.
-
-Only the user who created a property can update or delete it.
-
-Email is used to search users for recommendations.
-
-Deployment
-You can deploy this backend to services like:
-
-Render
-
-Vercel
-
-Make sure to configure environment variables properly in the hosting service dashboard.
-
-Author
-Jitendra Kumar
+```
 
