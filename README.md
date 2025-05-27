@@ -53,7 +53,7 @@ bash
 npm install
 ```
 
-##API ENDPOINTS
+
 ## API Endpoints
 
 | Method | Endpoint                  | Description                          | Access   |
@@ -80,7 +80,7 @@ npm install
 | POST   | /api/recommendations      | Recommend property to another user  | Private  |
 | GET    | /api/recommendations      | Get all recommendations received    | Private  |
 
-##project directory
+## project directory
 
 ```
 property-listing-backend/
