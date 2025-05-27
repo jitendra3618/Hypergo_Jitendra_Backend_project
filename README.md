@@ -47,7 +47,7 @@ This is a backend RESTful API for a Property Listing system. It allows users to 
 ## Install dependencies
 
 ```bash
-npm install
+npm install```
 
 ##API ENDPOINTS
 ## API Endpoints
