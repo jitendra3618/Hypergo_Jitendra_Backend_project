@@ -41,13 +41,17 @@ This is a backend RESTful API for a Property Listing system. It allows users to 
 ### Installation
 
 1. Clone the repo:
-   ```bash
+   ```
+   bash
    git clone https://github.com/yourusername/property-listing-backend.git
    cd property-listing-backend
+    ```
 ## Install dependencies
 
-```bash
-npm install```
+```
+bash
+npm install
+```
 
 ##API ENDPOINTS
 ## API Endpoints
@@ -78,7 +82,8 @@ npm install```
 
 ##project directory
 
-```property-listing-backend/
+```
+property-listing-backend/
 ├── config/
 │   ├── db.js              # MongoDB connection setup
 │   └── redis.js           # Redis client setup
