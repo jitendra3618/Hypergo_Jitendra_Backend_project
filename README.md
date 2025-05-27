@@ -110,3 +110,38 @@ property-listing-backend/
 └── package.json
 ```
 
+# Project Tasks Summary
+
+## 1. Import CSV Data into MongoDB
+- Used a script (not shown here) to parse CSV files and bulk insert property data into MongoDB for initial data population.
+
+## 2. CRUD Operations for Properties
+- Implemented create, read, update, and delete endpoints in `propertyController.js`.
+- Authorization enforced so only the property creator (`createdBy`) can update or delete their properties.
+
+## 3. Advanced Search/Filtering
+- Implemented in `getProperties` endpoint with dynamic filters based on query parameters.
+- Supports filtering on 10+ property attributes (e.g., price, location, bedrooms).
+
+## 4. Caching with Redis
+- Integrated Redis caching in property listing APIs to speed up frequent queries.
+- Cache invalidated on property create, update, and delete to maintain consistency.
+
+## 5. User Registration and Login
+- Created user model with encrypted passwords.
+- Auth endpoints for registration and login with JWT token generation.
+- Protected routes using JWT middleware.
+
+## 6. Favorites Management
+- Users can add/remove properties to/from favorites.
+- CRUD operations on favorites implemented with ownership checks.
+
+## Bonus Task: Property Recommendations
+- Users can recommend properties to other registered users by searching via email.
+- Recommendations saved and can be viewed in a dedicated section.
+- Implemented recommendation model, controller, and routes.
+
+---
+
+This summary outlines the main features and how they were implemented to deliver a full property listing backend system with authentication, authorization, caching, and social features.
+
