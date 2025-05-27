@@ -144,4 +144,13 @@ property-listing-backend/
 ---
 
 This summary outlines the main features and how they were implemented to deliver a full property listing backend system with authentication, authorization, caching, and social features.
+## Deployment
+You can deploy this backend to services like:
 
+Render
+Vercel
+
+
+
+## Author
+# Jitendra Kumar
